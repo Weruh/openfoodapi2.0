@@ -1,9 +1,7 @@
 from copy import deepcopy
 import math
-
 from flask import Flask, jsonify, request
 from werkzeug.exceptions import HTTPException
-
 from openfoodfacts import ExternalAPIError, ProductNotFound, find_by_barcode, find_by_name
 
 SAMPLE_ITEMS = [
@@ -152,6 +150,7 @@ def create_app():
 
 
 app = create_app()
+
 
 if __name__ == "__main__":
     app.run()
